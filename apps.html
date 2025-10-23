@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>قائمة التطبيقات - MobiTech</title>
+  <link rel="stylesheet" href="css/new-style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logoBox">
+      <div class="logoMark">MT</div>
+      <div class="logoText">MobiTech</div>
+    </div>
+    <nav class="sideNav">
+      <a href="index.html">الصفحة الرئيسية</a>
+      <a href="apps.html" class="active">التطبيقات</a>
+      <a href="add_app.html">أضف تطبيق</a>
+      <a href="about.html">من نحن</a>
+    </nav>
+    <div class="sideFooter">© 2025 MobiTech</div>
+  </aside>
+
+  <main class="mainContent">
+    <header class="topHeader">
+      <h1>التطبيقات</h1>
+      <p class="lead">هنا قائمة بالتطبيقات المحفوظة عندك على المتصفح — اضغط عرض لرؤية التفاصيل.</p>
+    </header>
+
+    <section class="card">
+      <div class="tableArea">
+        <table id="appsTable" class="appsTable" aria-live="polite">
+          <thead>
+            <tr>
+              <th>عرض</th>
+              <th>الاسم</th>
+              <th>الشركة</th>
+              <th>مجاني؟</th>
+              <th>المجال</th>
+              <th>موقع</th>
+            </tr>
+          </thead>
+          <tbody id="appsBody">
+            <!-- يمتلئ بواسطة JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

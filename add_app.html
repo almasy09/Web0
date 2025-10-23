@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>أضف تطبيق - MobiTech</title>
+  <link rel="stylesheet" href="css/new-style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logoBox">
+      <div class="logoMark">MT</div>
+      <div class="logoText">MobiTech</div>
+    </div>
+    <nav class="sideNav">
+      <a href="index.html">الصفحة الرئيسية</a>
+      <a href="apps.html">التطبيقات</a>
+      <a href="add_app.html" class="active">أضف تطبيق</a>
+      <a href="about.html">من نحن</a>
+    </nav>
+    <div class="sideFooter">© 2025 MobiTech</div>
+  </aside>
+
+  <main class="mainContent">
+    <header class="topHeader">
+      <h1>أضف تطبيق جديد</h1>
+      <p class="lead">املأ النموذج بالأسفل — تحقق بسيط موجود قبل الحفظ.</p>
+    </header>
+
+    <section class="card">
+      <form id="newAppForm" class="form">
+        <label>اسم التطبيق (إنجليزي بدون فراغ)</label>
+        <input id="app_name" type="text" placeholder="MyAppX" />
+
+        <label>الشركة (إنجليزي)</label>
+        <input id="app_maker" type="text" placeholder="MakerCo" />
+
+        <label>رابط الموقع (URL)</label>
+        <input id="app_url" type="url" placeholder="https://example.com" />
+
+        <label>مجاني؟</label>
+        <div class="inline">
+          <label><input name="app_free" type="radio" value="true" checked /> نعم</label>
+          <label><input name="app_free" type="radio" value="false" /> لا</label>
+        </div>
+
+        <label>المجال</label>
+        <select id="app_category">
+          <option value="">-- اختر المجال --</option>
+          <option>Education</option>
+          <option>Health</option>
+          <option>Finance</option>
+          <option>Productivity</option>
+          <option>Other</option>
+        </select>
+
+        <label>وصف مختصر</label>
+        <textarea id="app_desc" placeholder="اكتب وصفاً مختصراً"></textarea>
+
+        <label>شعار (صورة)</label>
+        <input id="app_logo" type="file" accept="image/*" />
+
+        <div class="formActions">
+          <button id="submitBtn" class="btnSubmit" type="submit">حفظ التطبيق</button>
+          <button id="resetBtn" class="btnReset" type="reset">إعادة</button>
+        </div>
+
+        <div id="formErrors" class="errors" aria-live="assertive"></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
